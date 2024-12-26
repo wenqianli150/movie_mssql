@@ -1,0 +1,116 @@
+<!-- ******************************************* -->
+<!-- TCSS 545: Homework 3                        -->
+<!-- Spring 2022,                                -->
+<!-- based on sample code provided by Eyhab      -->
+<!-- Al-Masri in TCSS 573. Adapted from sample   -->
+<!-- code provided by Microsoft                  -->
+<!--                                             -->
+<!-- ******************************************* -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netflix Movie Lookup</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- using the Darkly style sheet. Go to https://bootswatch.com/ and click on Themes and select a theme if you wish to change this current theme! -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.css">
+</head>
+
+
+<!-- onload calls a function that initializes some HTML elements -->
+<body onload="initElements()">
+
+
+    <div class="jumbo">
+        <div class="container">
+            <h1 class="display-4"><b>Netflix Movies Lookup</b></h1>
+        </div>
+    </div>
+
+
+    <form class="pure-form">
+        <div id="select_rating" class="form-group">
+            <label for="name" class="form-label mt-4"><h5>Filter by Rating</h5></label>
+            <select class="form-select" id="rating_id">
+                <option id="option" value ="NONE"></option>
+            </select>
+        </div>
+
+        <div id="select_genre" class="form-group">
+            <label for="name" class="form-label mt-4"><h5>Filter by Genre</h5></label>
+            <select class="form-select" id="genre_id">
+                <option id="option" value ="NONE"></option>
+            </select>
+        </div> 
+
+        <div id="select_actor" class="form-group">
+            <label for="name" class="form-label mt-4"><h5>Filter by Actor</h5></label>
+            <select class="form-select" id="actor_id">
+                <option id="option" value ="NONE"></option>
+            </select>
+        </div>
+    </form>
+
+    <style>
+      body {
+        text-align: center;
+      }
+      form { 
+        margin: 0 auto; 
+        width:33%;
+      }
+    </style>
+
+    <br>
+    <br>
+    <div class="container" id=loader>
+        <div class="page-header" id="banner">
+            <div class="spinner-border text-secondary" role="status">
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id=favInfo>
+        <div class="page-header" id="banner">
+            <table id="favTable" class="table table-striped table-bordered table-hover ">
+                <thead>
+                    <tr>
+                      <th>Movie Title</th>
+                      <th>Country</th>
+                      <th>Duration (min)</th>
+                      <th>Year</th>
+                      <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <br>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="container" id=movieInfo>
+        <div class="page-header" id="banner">
+            <table id="movieTable" class="table table-striped table-bordered table-hover ">
+                <thead>
+                    <tr>
+                      <th>Movie Title</th>
+                      <th>Country</th>
+                      <th>Duration (min)</th>
+                      <th>Year</th>
+                      <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
